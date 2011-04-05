@@ -1,0 +1,24 @@
+Network-based IP tiebreaker for CMAN.  Based on
+clumanager 1.2.39's IP tiebreaker and qdiskd's use of
+CMAN.
+
+For two node IP tiebreaker:
+
+<cluster>
+   ...
+   <totem token="10000" ... />
+   ...
+   <cman expected_votes="3" two_node="0" />
+   ...
+</cluster>
+
+Then, run the following:
+
+   ./qnet -a <upstream_router_ip>
+
+If your token value is different, run:
+
+   ./qnet -t <token_value> -a <upstream_router_ip>
+
+Lon Hohberger
+lon at metamorphism.com
