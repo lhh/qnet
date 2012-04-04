@@ -66,11 +66,11 @@ node_count(cman_handle_t ch)
 
 	for (x = 0; x < retnodes; x++) {
 		if (cman_nodes[x].cn_member)
-			++retnodes;
+			++ret;
 	}
 
 	free(cman_nodes);
-	return retnodes;
+	return ret;
 }
 
 
